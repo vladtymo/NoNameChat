@@ -8,5 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button>Click me</Button>
+        <TextBlock></TextBlock>
     </Grid>
 </Window>
