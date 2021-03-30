@@ -12,7 +12,7 @@ namespace Server
         static void Main(string[] args)
         {
             ChatModel con = new ChatModel();
-            foreach (var item in con.Admins)
+            foreach (var item in con.Messages)
             {
 
             }
