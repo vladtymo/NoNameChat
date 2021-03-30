@@ -11,8 +11,8 @@ namespace DAL
         public int Id { get; set; }
         public string Text { get; set; }
 
-        public int? ToId { get; set; }
-        public virtual User To { get; set; }
+        public int GroupId { get; set; }
+        public  virtual Group Group { get; set; }
 
         public int FromId { get; set; }
         public virtual User From { get; set; }

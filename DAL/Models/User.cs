@@ -9,7 +9,6 @@
         public User()
         {
             Groups = new HashSet<Group>();
-            Admins = new HashSet<Admin>();
             Messages = new HashSet<Message>();
         }
         public int Id { get; set; }
@@ -19,11 +18,12 @@
         public string Password { get; set; }
         [Required]
         public string Email { get; set; }
-        public DateTime? BirthDate { get; set; }
+        [Required]
+        public string Phone { get; set; }
+        public string ImagePath { get; set; }
 
-        public virtual ICollection<Group>  Groups  { get; set; }
+        public virtual ICollection<Group>  Groups { get; set; }
         public virtual ICollection<Message>  Messages { get; set; }
-        public virtual ICollection<Admin>  Admins  { get; set; }
 
     }
 }

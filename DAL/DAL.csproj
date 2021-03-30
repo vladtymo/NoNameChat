@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Admin.cs" />
     <Compile Include="EF\ChatModel.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Models\File.cs" />

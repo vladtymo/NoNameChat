@@ -7,11 +7,13 @@
         public Group()
         {
             Users = new HashSet<User>();
-            Admins = new HashSet<Admin>();
+            Messages = new HashSet<Message>();
         }
         public int Id { get; set; }
         public string Name { get; set; }
+        public string ImagePath { get; set; }
+
         public virtual ICollection<User> Users { get; set; }
-        public virtual ICollection<Admin> Admins { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
     }
 }
