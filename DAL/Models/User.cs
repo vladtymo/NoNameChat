@@ -10,6 +10,7 @@
         {
             Groups = new HashSet<Group>();
             Admins = new HashSet<Admin>();
+            Messages = new HashSet<Message>();
         }
         public int Id { get; set; }
         [Required]
@@ -21,6 +22,7 @@
         public DateTime? BirthDate { get; set; }
 
         public virtual ICollection<Group>  Groups  { get; set; }
+        public virtual ICollection<Message>  Messages { get; set; }
         public virtual ICollection<Admin>  Admins  { get; set; }
 
     }

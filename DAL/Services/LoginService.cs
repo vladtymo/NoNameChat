@@ -14,6 +14,7 @@ namespace DAL
             SuccessLogin,
             NotExist,
         }
+
         // With hash password
         public static Tuple<User, LoginStatus> Login(ChatModel _context, User user)
         {
