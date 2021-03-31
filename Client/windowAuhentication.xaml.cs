@@ -23,5 +23,10 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
     }
 }
