@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.Models
+namespace BLL.DTOs
 {
-    public class Message
+    class MessageDTO
     {
         public int Id { get; set; }
         public string Text { get; set; }
 
         public int GroupId { get; set; }
-        public  virtual Group Group { get; set; }
+        public virtual GroupDTO Group { get; set; }
 
         public int FromId { get; set; }
-        public virtual User From { get; set; }
+        public virtual UserDTO From { get; set; }
 
         public int? FileId { get; set; }
-        public virtual File File { get; set; }
+        public virtual FileDTO File { get; set; }
     }
 }
