@@ -64,7 +64,7 @@
                    Margin="107,3,0,0"
                    Cursor="Hand"
                    MouseDown="Label_MouseDown"
-
+              >
             </Label>
         </StackPanel>
 
