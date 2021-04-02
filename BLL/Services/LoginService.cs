@@ -8,6 +8,7 @@ using AutoMapper;
 using DAL.Interfaces;
 using DAL.Models;
 using BLL.DTOs;
+using BLL.ToHash;
 using DAL;
 
 namespace BLL
@@ -37,17 +38,17 @@ namespace BLL
         }
 
         // With hash password
-        public Tuple<UserDTO, LoginStatus> Login(UserDTO user)
+        public Tuple<UserDTO, LoginStatus> Login(UserDTO user, bool needHash = false)
         {
-            return Login(repositories.UserRepos, user);
+            if (!needHash)
+                return Login(repositories.UserRepos, user);
+            else
+            {
+                user.Password = Hasher.ComputeSha256Hash(user.Password);
+                return Login(repositories.UserRepos, user);
+            }
         }
         // Without hash password
-        public Tuple<UserDTO, LoginStatus> Login(string email, string password)
-        {
-            string _password = ToHash.Hasher.ComputeSha256Hash(password);
-            return Login(repositories.UserRepos, new UserDTO() { Email = email, Password = _password });
-        }
-
         private Tuple<UserDTO, LoginStatus> Login(IRepository<User> users, UserDTO user)
         {
             if (users.Get(u => u.Email == user.Email).FirstOrDefault(u => u.Password == user.Password) is User user1 && user1 != null)
