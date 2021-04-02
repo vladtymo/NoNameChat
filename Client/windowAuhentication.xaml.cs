@@ -15,31 +15,16 @@ using System.Windows.Shapes;
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for windowLogin.xaml
+    /// Interaction logic for windowAuhentication.xaml
     /// </summary>
-    public partial class windowLogin : Window
+    public partial class windowAuhentication : Window
     {
-        public windowLogin()
+        public windowAuhentication()
         {
             InitializeComponent();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Close();
-        }
-
-        private void PackIcon_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Close();
-        }
-
-        private void regBtn(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void logBtn(object sender, RoutedEventArgs e)
         {
             Close();
         }
