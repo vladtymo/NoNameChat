@@ -28,5 +28,10 @@ namespace Client
         {
             Close();
         }
+
+        private void BtnSubmit(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
