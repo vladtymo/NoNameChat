@@ -112,11 +112,12 @@
                     
                 </Label>
                 <CheckBox Content="Remember me " 
-                          Margin="63,0,0,0" 
+                          Margin="63,0,210,0" 
                           Foreground="White" 
                           FontFamily="Helvetica"
                           Cursor="Hand"
-                          FontWeight="Light">
+                          FontWeight="Light"
+                          Width="110">
                     <CheckBox.Resources>
                         <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="White"></SolidColorBrush>
                         <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="White"></SolidColorBrush>
