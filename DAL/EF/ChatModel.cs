@@ -1,5 +1,6 @@
 namespace DAL
 {
+    using DAL.Models;
     using System.Data.Entity;
     using System.Linq;
 
