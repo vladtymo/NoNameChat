@@ -33,5 +33,15 @@ namespace Client
         {
             Close();
         }
+
+        private void regBtn(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void logBtn(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
