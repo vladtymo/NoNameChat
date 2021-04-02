@@ -146,7 +146,7 @@
                             BorderBrush="White"
                             Opacity="0.8"
                             materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                            />
+                            Click="BtnRegister"/>
                         <Button Width="100" 
                             Height="40" 
                             Content="CANCEL"
@@ -156,7 +156,7 @@
                             BorderBrush="White"
                             Opacity="0.8"
                             materialDesign:ShadowAssist.ShadowDepth="Depth0"
-                            />
+                            Click="BtnCancel"/>
                     </StackPanel>
 
                 </StackPanel>
