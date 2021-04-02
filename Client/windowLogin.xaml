@@ -107,15 +107,22 @@
                        Foreground="White" 
                        Opacity="0.5" 
                        MouseDown="Label_MouseDown" 
-                       Cursor="Hand"></Label>
+                       Cursor="Hand"                      
+                       >
+                    
+                </Label>
                 <CheckBox Content="Remember me " 
-                          Margin="63,0,0,0" 
+                          Margin="63,0,210,0" 
                           Foreground="White" 
                           FontFamily="Helvetica"
                           Cursor="Hand"
                           FontWeight="Light"
-                               
-                          />
+                          Width="110">
+                    <CheckBox.Resources>
+                        <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="White"></SolidColorBrush>
+                        <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="White"></SolidColorBrush>
+                    </CheckBox.Resources>
+                </CheckBox>
                 <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
                     <Button Width="100" 
                             Height="40" 
@@ -125,7 +132,8 @@
                             Background="Transparent"
                             BorderBrush="White"
                             FontWeight="Light"
-                            Opacity="0.8"/>
+                            Opacity="0.8"
+                            Click="logBtn"/>
                     <Button Width="100" 
                             Height="40"
                             Content="REGISTER" 
@@ -133,7 +141,8 @@
                             materialDesign:ShadowAssist.ShadowDepth="Depth0"
                             BorderBrush="White"
                             FontWeight="Light"
-                            Opacity="0.8"/>
+                            Opacity="0.8"
+                            Click="regBtn"/>
                 </StackPanel>
 
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">

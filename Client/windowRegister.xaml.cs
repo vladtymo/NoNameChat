@@ -28,5 +28,15 @@ namespace Client
         {
             Close();
         }
+
+        private void BtnRegister(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCancel(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
