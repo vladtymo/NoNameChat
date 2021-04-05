@@ -68,10 +68,10 @@
     </ApplicationDefinition>
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
-    <Compile Include="ViewModels\EntityModels\FileViewModel.cs" />
-    <Compile Include="ViewModels\EntityModels\GroupViewModel.cs" />
-    <Compile Include="ViewModels\EntityModels\MessageViewModel.cs" />
-    <Compile Include="ViewModels\EntityModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\FileViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\GroupViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
