@@ -65,10 +65,10 @@
     </ApplicationDefinition>
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\DelegateCommand.cs" />
-    <Compile Include="ViewModels\FileViewModel.cs" />
-    <Compile Include="ViewModels\GroupViewModel.cs" />
-    <Compile Include="ViewModels\MessageViewModel.cs" />
-    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\EntityModels\FileViewModel.cs" />
+    <Compile Include="ViewModels\EntityModels\GroupViewModel.cs" />
+    <Compile Include="ViewModels\EntityModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\EntityModels\UserViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="windowAuhentication.xaml.cs">
       <DependentUpon>windowAuhentication.xaml</DependentUpon>
