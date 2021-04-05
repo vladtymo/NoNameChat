@@ -69,6 +69,8 @@
     <Compile Include="ViewModels\EntityModels\GroupViewModel.cs" />
     <Compile Include="ViewModels\EntityModels\MessageViewModel.cs" />
     <Compile Include="ViewModels\EntityModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\Interface\IService.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="windowAuhentication.xaml.cs">
       <DependentUpon>windowAuhentication.xaml</DependentUpon>
@@ -132,6 +134,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4b07528c-524c-4d50-b691-012f881c75b5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{c644255c-e572-4591-b766-cc1a27fb6045}</Project>
       <Name>DAL</Name>
