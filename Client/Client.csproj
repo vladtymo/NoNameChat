@@ -69,7 +69,6 @@
     <Compile Include="ViewModels\EntityModels\GroupViewModel.cs" />
     <Compile Include="ViewModels\EntityModels\MessageViewModel.cs" />
     <Compile Include="ViewModels\EntityModels\UserViewModel.cs" />
-    <Compile Include="ViewModels\Interface\IService.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="windowAuhentication.xaml.cs">
