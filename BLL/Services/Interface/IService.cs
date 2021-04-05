@@ -14,9 +14,9 @@ namespace BLL
         void CreateNewMessage(MessageDTO newMessage);
         void CreateNewUser(UserDTO newUser);
 
-        IEnumerable<FileDTO> GetAllFile();
-        IEnumerable<GroupDTO> GetAllGroup();
-        IEnumerable<MessageDTO> GetAllMessage();
-        IEnumerable<UserDTO> GetAllUser();
+        IEnumerable<FileDTO> GetAllFiles();
+        IEnumerable<GroupDTO> GetAllGroups();
+        IEnumerable<MessageDTO> GetAllMessages();
+        IEnumerable<UserDTO> GetAllUsers();
     }
 }

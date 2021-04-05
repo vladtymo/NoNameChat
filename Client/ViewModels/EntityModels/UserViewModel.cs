@@ -7,6 +7,7 @@
         private string email;
         private string phone;
         private string imagePath;
+        private byte[] bytesImage;
 
         public int Id { get; set; }
 
@@ -40,5 +41,10 @@
             set { SetProperty(ref imagePath, value); }
         }
 
+        public byte[] Bytes
+        {
+            get { return bytesImage; }
+            set { SetProperty(ref bytesImage, value); }
+        }
     }
 }

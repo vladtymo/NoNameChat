@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace PresentationLayer.Commands
+namespace Client.Commands
 {
     internal abstract class Command : ICommand
     {

@@ -17,7 +17,7 @@
 
 
         public int GroupId { get; set; }
-        public virtual GroupViewModel Group
+        public GroupViewModel Group
         {
             get { return group; }
             set { SetProperty(ref group, value); }
@@ -25,7 +25,7 @@
 
 
         public int FromId { get; set; }
-        public virtual UserViewModel From
+        public UserViewModel From
         {
             get { return from; }
             set { SetProperty(ref from, value); }
@@ -33,7 +33,7 @@
 
 
         public int? FileId { get; set; }
-        public virtual FileViewModel File
+        public FileViewModel File
         {
             get { return file; }
             set { SetProperty(ref file, value); }

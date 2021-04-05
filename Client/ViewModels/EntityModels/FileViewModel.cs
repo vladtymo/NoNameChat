@@ -11,6 +11,7 @@ namespace Client
         private string name;
         private string path;
         private MessageViewModel message;
+        private byte[] bytesFile;
 
         public int Id { get; set; }
 
@@ -28,10 +29,16 @@ namespace Client
 
 
         public int MessageId { get; set; }
-        public virtual MessageViewModel Message
+        public MessageViewModel Message
         {
             get { return message; }
             set { SetProperty(ref message, value); }
+        }
+
+        public byte[] Bytes
+        {
+            get { return bytesFile; }
+            set { SetProperty(ref bytesFile, value); }
         }
     }
 }

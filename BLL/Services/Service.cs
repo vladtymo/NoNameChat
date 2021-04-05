@@ -65,22 +65,22 @@ namespace BLL
         #endregion
 
         #region Gets
-        public IEnumerable<FileDTO> GetAllFile()
+        public IEnumerable<FileDTO> GetAllFiles()
         {
             return mapper.Map<IEnumerable<FileDTO>>(repositroties.FileRepos.Get());
         }
 
-        public IEnumerable<GroupDTO> GetAllGroup()
+        public IEnumerable<GroupDTO> GetAllGroups()
         {
             return mapper.Map<IEnumerable<GroupDTO>>(repositroties.GroupRepos.Get());
         }
 
-        public IEnumerable<MessageDTO> GetAllMessage()
+        public IEnumerable<MessageDTO> GetAllMessages()
         {
             return mapper.Map<IEnumerable<MessageDTO>>(repositroties.MessageRepos.Get());
         }
 
-        public IEnumerable<UserDTO> GetAllUser()
+        public IEnumerable<UserDTO> GetAllUsers()
         {
             return mapper.Map<IEnumerable<UserDTO>>(repositroties.UserRepos.Get());
         } 
