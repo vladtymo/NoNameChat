@@ -37,7 +37,6 @@ namespace BLL
             mapper = new Mapper(config);
         }
 
-        // With hash password
         public Tuple<UserDTO, LoginStatus> Login(UserDTO user, bool needHash = false)
         {
             if (!needHash)
@@ -48,7 +47,7 @@ namespace BLL
                 return Login(repositories.UserRepos, user);
             }
         }
-        // Without hash password
+
         private Tuple<UserDTO, LoginStatus> Login(IRepository<User> users, UserDTO user)
         {
             if (users.Get(u => u.Email == user.Email).FirstOrDefault(u => u.Password == user.Password) is User user1 && user1 != null)
