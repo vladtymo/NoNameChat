@@ -11,11 +11,9 @@ namespace BLL.DTOs
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public string Path { get; set; }
-
         public byte[] bytesFile { get; set; }
 
         public int MessageId { get; set; }
-        public virtual MessageDTO Message { get; set; }
+        public MessageDTO Message { get; set; }
     }
 }

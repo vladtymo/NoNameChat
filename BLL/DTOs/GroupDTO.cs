@@ -11,7 +11,6 @@ namespace BLL.DTOs
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public string ImagePath { get; set; }
         public byte[] bytesImage { get; set; }
 
         //public virtual ICollection<User> Users { get; set; }

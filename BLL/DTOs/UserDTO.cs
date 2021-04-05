@@ -13,7 +13,6 @@ namespace BLL.DTOs
         public string Password { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public string ImagePath { get; set; }
         public byte[] bytesImage { get; set; }
 
         //public virtual ICollection<Group> Groups { get; set; }
