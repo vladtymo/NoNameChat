@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    class FileDTO
+    public class FileDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public byte[] Path { get; set; }
+
+        public byte[] bytesFile { get; set; }
 
         public int MessageId { get; set; }
-        public virtual MessageDTO Message { get; set; }
+        public MessageDTO Message { get; set; }
     }
 }

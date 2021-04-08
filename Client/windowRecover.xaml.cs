@@ -15,28 +15,23 @@ using System.Windows.Shapes;
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for windowRegister.xaml
+    /// Interaction logic for windowRecover.xaml
     /// </summary>
-    public partial class windowRegister : Window
+    public partial class windowRecover : Window
     {
-        public windowRegister()
+        public windowRecover()
         {
             InitializeComponent();
         }
 
-        private void PackIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        private void RecoverClose(object sender, MouseButtonEventArgs e)
         {
             Close();
         }
 
-        private void BtnRegister(object sender, RoutedEventArgs e)
+        private void SendCode(object sender, MouseButtonEventArgs e)
         {
-
-        }
-
-        private void BtnCancel(object sender, RoutedEventArgs e)
-        {
-
+            Close();
         }
     }
 }

@@ -15,23 +15,28 @@ using System.Windows.Shapes;
 namespace Client
 {
     /// <summary>
-    /// Interaction logic for windowAuhentication.xaml
+    /// Interaction logic for windowSettings.xaml
     /// </summary>
-    public partial class windowAuhentication : Window
+    public partial class windowSettings : Window
     {
-        public windowAuhentication()
+        public windowSettings()
         {
             InitializeComponent();
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        private void SettingsClose(object sender, MouseButtonEventArgs e)
         {
             Close();
         }
 
-        private void BtnSubmit(object sender, RoutedEventArgs e)
+        private void UploadPhoto(object sender, MouseButtonEventArgs e)
         {
+            Close();
+        }
 
+        private void ChangePassword(object sender, MouseButtonEventArgs e)
+        {
+            Close();
         }
     }
 }
