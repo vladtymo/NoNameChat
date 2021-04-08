@@ -69,6 +69,8 @@
     </ApplicationDefinition>
     <Compile Include="windowRegister.xaml.cs">
       <DependentUpon>windowRegister.xaml</DependentUpon>
+    <Compile Include="windowClient.xaml.cs">
+      <DependentUpon>windowLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="windowSettings.xaml.cs">
       <DependentUpon>windowSettings.xaml</DependentUpon>
@@ -86,6 +88,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="windowRegister.xaml">
+    <Page Include="windowClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,7 +134,12 @@
       <Name>MaterialMenu</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
