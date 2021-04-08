@@ -8,7 +8,7 @@
         Success,
         Warning,
         Danger,
-        NoNameTheme
+        MyTheme
     }
     public enum UiTheme
     {

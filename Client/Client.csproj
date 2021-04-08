@@ -69,6 +69,7 @@
     </ApplicationDefinition>
     <Compile Include="windowAuthentication.xaml.cs">
       <DependentUpon>windowAuthentication.xaml</DependentUpon>
+
     </Compile>
     <Compile Include="windowSettings.xaml.cs">
       <DependentUpon>windowSettings.xaml</DependentUpon>
@@ -131,7 +132,12 @@
       <Name>MaterialMenu</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
