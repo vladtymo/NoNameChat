@@ -67,15 +67,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\Command.cs" />
-    <Compile Include="Commands\DelegateCommand.cs" />
-    <Compile Include="ViewModels\EntityViewModels\FileViewModel.cs" />
-    <Compile Include="ViewModels\EntityViewModels\GroupViewModel.cs" />
-    <Compile Include="ViewModels\EntityViewModels\MessageViewModel.cs" />
-    <Compile Include="ViewModels\EntityViewModels\UserViewModel.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="ViewModels\RegisterViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="windowAuhentication.xaml.cs">
+      <DependentUpon>windowAuhentication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowLogin.xaml.cs">
+      <DependentUpon>windowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowRegister.xaml.cs">
+      <DependentUpon>windowRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowSettings.xaml.cs">
+      <DependentUpon>windowSettings.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
