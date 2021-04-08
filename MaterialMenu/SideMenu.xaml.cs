@@ -164,7 +164,7 @@ namespace MaterialMenu
                         break;
                     case SideMenuTheme.NoNameTheme:
                         background = new SolidColorBrush { Color = Color.FromArgb(230, 49, 147, 158) };
-                        buttonBackground = new SolidColorBrush { Color = Color.FromArgb(50, 179, 69, 65) };
+                        buttonBackground = new SolidColorBrush { Color = Color.FromArgb(0, 179, 69, 65) };
                         buttonHoverBackground = new SolidColorBrush { Color = Color.FromArgb(30, 255, 255, 255) };
                         break;
                     default:

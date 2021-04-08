@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    class GroupDTO
+    public class GroupDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public byte[] ImagePath { get; set; }
+
+        public byte[] bytesImage { get; set; }
 
         //public virtual ICollection<User> Users { get; set; }
         //public virtual ICollection<Message> Messages { get; set; }

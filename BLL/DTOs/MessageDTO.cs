@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    class MessageDTO
+    public class MessageDTO
     {
         public int Id { get; set; }
         public string Text { get; set; }
 
         public int GroupId { get; set; }
-        public virtual GroupDTO Group { get; set; }
+        public GroupDTO Group { get; set; }
 
         public int FromId { get; set; }
-        public virtual UserDTO From { get; set; }
+        public UserDTO From { get; set; }
 
         public int? FileId { get; set; }
-        public virtual FileDTO File { get; set; }
+        public FileDTO File { get; set; }
     }
 }

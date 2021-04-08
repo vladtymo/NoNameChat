@@ -24,5 +24,30 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void MainWinClose(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void MainWindowHide(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void MainMenuOpen(object sender, MouseButtonEventArgs e)
+        {
+            Menu.Toggle();
+        }
+
+        private void MessangerSend(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void MainMenuHide(object sender, MouseButtonEventArgs e)
+        {
+            Menu.Hide();
+        }
     }
 }
