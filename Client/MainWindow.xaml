@@ -3,10 +3,247 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Client"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:materialMenu="clr-namespace:MaterialMenu;assembly=MaterialMenu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800"
+        AllowsTransparency="False" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        >
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <materialMenu:SideMenu HorizontalAlignment="Left"
+                               x:Name="Menu"
+                               Theme="NoNameTheme"
+                               State="Hidden"                            
+                               MenuWidth="300"
+                               >
+            <materialMenu:SideMenu.Menu>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Orientation="Vertical" >
+
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="NoName Chat"
+                                    FontWeight="light"
+                                    Foreground="White"
+                                    FontSize="25"
+                                    Width="160"
+                                   Margin="32,0,0,0">
+
+                            </Label>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                            <materialDesign:PackIcon Kind="GroupAdd" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"
+                                                Margin="10,0,0,0">
+                            </materialDesign:PackIcon>
+                            <materialMenu:MenuButton Text="New group" Margin="-25,0,0,0" Width="300">
+                            </materialMenu:MenuButton>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Contact" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"
+                                                Margin="10,0,0,0">
+                            </materialDesign:PackIcon>
+                            <materialMenu:MenuButton Text="Contacts" Margin="-25,0,0,0" Width="300"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Settings" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"
+                                                Margin="10,0,0,0">
+                            </materialDesign:PackIcon>
+                            <materialMenu:MenuButton Text="Settings" Margin="-25,0,0,0" Width="300"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="About" 
+                                                VerticalAlignment="Center" 
+                                                HorizontalAlignment="Center" 
+                                                Foreground="White"
+                                                Margin="10,0,0,0">
+                            </materialDesign:PackIcon>
+                            <materialMenu:MenuButton Text="About"  Margin="-25,0,0,0" Width="300"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="40" Height="30" 
+                                    Background="Transparent" 
+                                    MouseDown="MainMenuHide"
+                                    Cursor="Hand"
+                                    Margin="0,290,0,0"
+                                    >
+                            </Border>
+                            <materialDesign:PackIcon Kind="ArrowLeft" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center" 
+                                            Foreground="White"
+                                            Margin="-40,290,0,0"
+                                            Height="30"
+                                            Width="50"
+                                            >
+                            </materialDesign:PackIcon>
+
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </materialMenu:SideMenu.Menu>
+        </materialMenu:SideMenu>
+        <Border CornerRadius="10" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#f083da" Offset="1"/>
+                    <GradientStop Color="#FF31939E" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border Grid.Column="1" 
+                    Height="79" 
+                    Width="570" 
+                    Margin="228,519,0,0" 
+                    Background="White" Opacity="0.1"
+                    >
+
+            </Border>
+        </Border>
+        <Border Height="51"
+                Margin="0,0,0,447"
+                Background="White"
+                Opacity="0.1"
+                Width="229"
+                BorderThickness="0,0,2,0">
+
+        </Border>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="40" Background="Transparent" 
+                        MouseDown="MainMenuOpen"
+                        Cursor="Hand"/>
+                <materialDesign:PackIcon 
+                    Height="30" 
+                    Width="30" 
+                    Kind="Menu"                  
+                    Foreground="White"
+                    Margin="-35,7,0,0"/>
+
+                <Label Content="NoName Chat" 
+                       FontWeight="light"
+                       Foreground="White"
+                       FontSize="25"
+                       >
+
+                </Label>
+
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBox 
+                         x:Name="TxtChat"
+                         materialDesign:TextFieldAssist.UnderlineBrush="Transparent" 
+                         materialDesign:HintAssist.Hint="Search chat..."
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontSize="15"
+                         Width="222"
+                         Margin="0,30,0,0">
+                </TextBox>
+                <!--<Border Width="226"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.9"/>-->
+            </StackPanel>
+            <StackPanel>
+                <ListBox Height="495"
+                         Background="White"
+                         Opacity="0.1"
+                         BorderThickness="0,0,2,0"
+                         Margin="0,3,0,0"
+                         x:Name="listChat">
+
+                </ListBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right">
+                <Border Width="470" x:Name="Header"         
+                        Background="Transparent" 
+                        Margin="0,5,0,0"
+                        >
+
+                </Border>
+                <materialDesign:PackIcon Kind="ExpandMore" 
+                     VerticalAlignment="Center" 
+                     HorizontalAlignment="Center" 
+                     Foreground="White"
+                     Height="30"
+                     Width="50"
+                     Cursor="Hand"
+                     MouseDown="MainWindowHide"
+                     Margin="0,6,0,0">
+                </materialDesign:PackIcon>
+
+                <materialDesign:PackIcon Kind="Close" 
+                     VerticalAlignment="Center" 
+                     HorizontalAlignment="Center" 
+                     Foreground="White"
+                     Height="30"
+                     Width="50"
+                     Cursor="Hand"
+                     MouseDown="MainWinClose"
+                     Margin="0,6,0,0">
+                </materialDesign:PackIcon>
+            </StackPanel>
+
+            <StackPanel>
+                <ListBox Height="470"
+                         Background="White"
+                         Opacity="0.1"
+                         Margin="0,15,0,0"
+                         x:Name="ListMessanger">
+
+                </ListBox>
+            </StackPanel>
+
+            <StackPanel  Height="79">
+                <TextBox x:Name="txtMessanger"
+                         Width="350"
+                         Height="40"
+                         materialDesign:TextFieldAssist.UnderlineBrush="Transparent" 
+                         materialDesign:HintAssist.Hint="Type Message..."
+                         FontWeight="Light"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         FontSize="15"
+                         TextWrapping="Wrap"/>
+                <Border Width="350"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.9"/>
+                <Label Content="SEND"
+                       Foreground="White"
+                       Width="40"
+                       Margin="320,3,0,0"
+                       Cursor="Hand"
+                       MouseDown="MessangerSend"
+                         >
+                </Label>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
