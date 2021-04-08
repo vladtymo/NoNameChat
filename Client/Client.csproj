@@ -67,7 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="windowLogin.xaml.cs">
+    <Compile Include="windowRegister.xaml.cs">
+      <DependentUpon>windowRegister.xaml</DependentUpon>
+    <Compile Include="windowClient.xaml.cs">
       <DependentUpon>windowLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="windowSettings.xaml.cs">
@@ -85,7 +87,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="windowLogin.xaml">
+    <Page Include="windowRegister.xaml">
+    <Page Include="windowClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
