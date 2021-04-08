@@ -67,9 +67,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\DelegateCommand.cs" />
+    <Compile Include="ViewModels\EntityViewModels\FileViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\GroupViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\MessageViewModel.cs" />
+    <Compile Include="ViewModels\EntityViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="windowAuthentication.xaml.cs">
       <DependentUpon>windowAuthentication.xaml</DependentUpon>
-
+    </Compile>
+    <Compile Include="windowLogin.xaml.cs">
+      <DependentUpon>windowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowRecover.xaml.cs">
+      <DependentUpon>windowRecover.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="windowRegister.xaml.cs">
+      <DependentUpon>windowRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="windowSettings.xaml.cs">
       <DependentUpon>windowSettings.xaml</DependentUpon>
@@ -89,6 +106,22 @@
     <Page Include="windowAuthentication.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windowLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windowRecover.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windowRegister.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="windowSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
