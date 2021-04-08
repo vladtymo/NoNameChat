@@ -162,9 +162,9 @@ namespace MaterialMenu
                         buttonBackground = new SolidColorBrush { Color = Color.FromArgb(50, 179, 69, 65) };
                         buttonHoverBackground = new SolidColorBrush { Color = Color.FromArgb(50, 238, 92, 86) };
                         break;
-                    case SideMenuTheme.NoNameTheme:
-                        background = new SolidColorBrush { Color = Color.FromArgb(230, 49, 147, 158) };
-                        buttonBackground = new SolidColorBrush { Color = Color.FromArgb(50, 179, 69, 65) };
+                    case SideMenuTheme.MyTheme:
+                        background = new SolidColorBrush { Color = Color.FromArgb(250, 49, 147, 158) };
+                        buttonBackground = new SolidColorBrush { Color = Color.FromArgb(0, 179, 69, 65) };
                         buttonHoverBackground = new SolidColorBrush { Color = Color.FromArgb(30, 255, 255, 255) };
                         break;
                     default:
@@ -199,7 +199,7 @@ namespace MaterialMenu
             RenderTransform.BeginAnimation(TranslateTransform.XProperty, animation);
             _isShown = true;
             var p = Parent as Panel;
-            (FindName("ShadowColumn") as ColumnDefinition).Width = new GridLength(10000);
+           
         }
 
         public void Hide()
@@ -211,7 +211,6 @@ namespace MaterialMenu
             };
             RenderTransform.BeginAnimation(TranslateTransform.XProperty, animation);
             _isShown = false;
-            (FindName("ShadowColumn") as ColumnDefinition).Width = new GridLength(0);
         }
 
         public override void OnApplyTemplate()
@@ -227,11 +226,6 @@ namespace MaterialMenu
             ShadowBackground = ShadowBackground;
             ButtonBackground = ButtonBackground;
             ButtonHover = ButtonHover;
-        }
-
-        private void ShadowMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (ClosingType == ClosingType.Auto) Hide();
         }
     }
 }

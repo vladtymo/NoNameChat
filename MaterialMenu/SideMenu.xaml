@@ -18,7 +18,6 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="MenuColumn" Width="400"></ColumnDefinition>
-            <ColumnDefinition x:Name="ShadowColumn" Width="0"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <ContentPresenter x:Name="MenuPresenter" Grid.Column="0" Content="{Binding Menu, ElementName=Control}"></ContentPresenter>
     </Grid>
