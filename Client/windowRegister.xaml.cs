@@ -28,5 +28,10 @@ namespace Client
         {
             Close();
         }
+
+        private void PackIcon_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <materialMenu:SideMenu HorizontalAlignment="Left"
                                x:Name="Menu"
-                               Theme="NoNameTheme"
+                               Theme="MyTheme"
                                State="Hidden"                            
                                MenuWidth="300"
                                >
@@ -120,7 +120,7 @@
             </Border>
         </Border>
         <Border Height="51"
-                Margin="0,0,0,447"
+                Margin="0,0,0,441"
                 Background="White"
                 Opacity="0.1"
                 Width="229"
@@ -130,15 +130,20 @@
 
         <StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Border Width="40" Background="Transparent" 
-                        MouseDown="MainMenuOpen"
-                        Cursor="Hand"/>
-                <materialDesign:PackIcon 
-                    Height="30" 
-                    Width="30" 
-                    Kind="Menu"                  
-                    Foreground="White"
-                    Margin="-35,7,0,0"/>
+                <Button Background="Transparent" BorderBrush="Transparent" Width="50" Click="Button_Click_1" Margin="0,6,0,0">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="Menu"
+                     VerticalAlignment="Center" 
+                     HorizontalAlignment="Center" 
+                     Foreground="White"
+                     Height="30"
+                     Width="30"
+                     Cursor="Hand"
+                        Margin="-5,7,0,0"                         >
+                        </materialDesign:PackIcon>
+
+                    </Grid>
+                </Button>
 
                 <Label Content="NoName Chat" 
                        FontWeight="light"
@@ -160,12 +165,9 @@
                          BorderThickness="0"
                          FontSize="15"
                          Width="222"
-                         Margin="0,30,0,0">
+                         Margin="0,30,0,0"
+                         Padding="5">
                 </TextBox>
-                <!--<Border Width="226"
-                        Height="2"
-                        Background="White"
-                        Opacity="0.9"/>-->
             </StackPanel>
             <StackPanel>
                 <ListBox Height="495"
@@ -186,27 +188,32 @@
                         >
 
                 </Border>
-                <materialDesign:PackIcon Kind="ExpandMore" 
+                <Button Background="Transparent" BorderBrush="Transparent" Width="50" Click="Button_Click" Margin="0,6,0,0">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="ExpandMore"
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Center" 
                      Foreground="White"
                      Height="30"
-                     Width="50"
-                     Cursor="Hand"
-                     MouseDown="MainWindowHide"
-                     Margin="0,6,0,0">
-                </materialDesign:PackIcon>
+                     Width="30"
+                     Cursor="Hand">
+                        </materialDesign:PackIcon>
 
-                <materialDesign:PackIcon Kind="Close" 
+                    </Grid>
+                </Button>
+                <Button Background="Transparent" BorderBrush="Transparent" Width="50" Click="Button_Click" Margin="0,6,0,0">
+                    <Grid>
+                        <materialDesign:PackIcon Kind="Close"
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Center" 
                      Foreground="White"
                      Height="30"
-                     Width="50"
-                     Cursor="Hand"
-                     MouseDown="MainWinClose"
-                     Margin="0,6,0,0">
-                </materialDesign:PackIcon>
+                     Width="30"
+                     Cursor="Hand">
+                        </materialDesign:PackIcon>
+
+                    </Grid>
+                </Button>
             </StackPanel>
 
             <StackPanel>
@@ -221,6 +228,7 @@
 
             <StackPanel  Height="79">
                 <TextBox x:Name="txtMessanger"
+                         Padding="5"
                          Width="350"
                          Height="40"
                          materialDesign:TextFieldAssist.UnderlineBrush="Transparent" 
