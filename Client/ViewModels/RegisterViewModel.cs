@@ -18,7 +18,12 @@ namespace Client
             User = new UserViewModel();
             OkCmd = new DelegateCommand((o) => { IsOK = true; ((Window)o).Close(); });
             CancelCmd = new DelegateCommand((o) => { IsOK = false; ((Window)o).Close(); });
+            
+
         }
+
+      
+
 
         public bool IsOK { get; set; }
 

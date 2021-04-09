@@ -9,7 +9,7 @@
         xmlns:materialMenu="clr-namespace:MaterialMenu;assembly=MaterialMenu"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="400"
-        AllowsTransparency="False" Background="Transparent"
+        AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         >

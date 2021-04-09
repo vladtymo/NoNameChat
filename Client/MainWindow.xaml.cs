@@ -25,9 +25,10 @@ namespace Client
 
         public MainWindow()
         {
+            InitializeComponent();
+            ListMessanger.Background = new SolidColorBrush { Color = Color.FromArgb(30, 255, 255, 255) };
             vm = new MainViewModel();
             DataContext = vm;
-            InitializeComponent();
             Header.MouseLeftButtonDown += new MouseButtonEventHandler(layoutRoot_MouseLeftButtonDown);
         }
 
@@ -62,6 +63,11 @@ namespace Client
         {
             Menu.Toggle();
 
+        }
+
+        private void MenuButton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            new windowSettings().ShowDialog();
         }
     }
 }

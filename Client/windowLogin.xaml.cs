@@ -19,14 +19,19 @@ namespace Client
     /// </summary>
     public partial class windowLogin : Window
     {
+        LoginViewModel vm = null;
+
         public windowLogin()
         {
+            vm = new LoginViewModel();
+            DataContext = vm;
             InitializeComponent();
         }
 
         private void MainForgotPassword(object sender, MouseButtonEventArgs e)
         {
-            Close();
+            windowRecover rw = new windowRecover();
+            rw.ShowDialog();
         }
 
         private void MainWinClose(object sender, MouseButtonEventArgs e)

@@ -9,7 +9,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800"
-        AllowsTransparency="False" Background="Transparent"
+        AllowsTransparency="True" Background="Transparent"
         xmlns:Interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
         WindowStyle="None" ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -73,7 +73,7 @@
                                                 Foreground="White"
                                                 Margin="10,0,0,0">
                             </materialDesign:PackIcon>
-                            <materialMenu:MenuButton Text="Settings" Margin="-25,0,0,0" Width="300"/>
+                            <materialMenu:MenuButton Text="Settings" Margin="-25,0,0,0" Width="300" MouseDown="MenuButton_MouseDown"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
@@ -222,18 +222,24 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel>
-                <ListBox Height="470"
-                         Background="White"
-                         Opacity="0.1"
+            <ListBox Height="470"
                          Margin="0,15,0,0"
                          x:Name="ListMessanger"
-                         ItemsSource = "{Binding Messages}">
-
-                </ListBox>
-            </StackPanel>
-
-            <StackPanel  Height="79">
+                         ItemsSource = "{Binding Messages}"
+                         VerticalAlignment="Bottom"
+                     VerticalContentAlignment="Bottom"
+                     HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding Text}" FontWeight="Light" Opacity="1" Foreground="White" ></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        
+        <StackPanel  Height="79">
                 <TextBox x:Name="txtMessanger"
                          Padding="5"
                          Width="350"

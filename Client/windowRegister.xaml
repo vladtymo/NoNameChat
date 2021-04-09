@@ -147,9 +147,9 @@
                             Background="Transparent"
                             BorderBrush="White"
                             Opacity="0.8"
-                            materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth0" Click="Button_Click_1"
                             />
-                        <Button Width="100" 
+                        <Button Width="100" Click="Button_Click"
                             Height="40" 
                             Content="CANCEL"
                             FontWeight="Light"

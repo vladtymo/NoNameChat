@@ -76,7 +76,8 @@
                     materialDesign:ShadowAssist.ShadowDepth="Depth0"
                     FontWeight="Light"
                     Foreground="White"
-                    Opacity="0.8">
+                    Opacity="0.8"
+                    Click="Button_Click">
 
             </Button>
         </StackPanel>

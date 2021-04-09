@@ -192,7 +192,8 @@
                             Background="Transparent"
                             BorderBrush="White"
                             FontWeight="Light"
-                            Opacity="0.8"/>
+                            Opacity="0.8"
+                    Click="Button_Click"/>
 
             <Button Width="100" 
                             Height="35" 
@@ -202,7 +203,8 @@
                             Background="Transparent"
                             BorderBrush="White"
                             FontWeight="Light"
-                            Opacity="0.8"/>
+                            Opacity="0.8"
+                    Click="Button_Click"/>
         </StackPanel>
 
     </Grid>
