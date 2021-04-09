@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using BLL;
 using Client.Commands;
 using System;
 using System.Collections.Generic;
