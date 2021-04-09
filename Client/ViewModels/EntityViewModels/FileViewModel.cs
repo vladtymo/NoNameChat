@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Client
 {
+    [Serializable]
     public class FileViewModel : ViewModelBase
     {
         private string name;

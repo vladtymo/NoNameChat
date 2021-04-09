@@ -1,5 +1,8 @@
-﻿namespace Client
+﻿using System;
+
+namespace Client
 {
+    [Serializable]
     public class UserViewModel : ViewModelBase
     {
         private string name;
