@@ -28,22 +28,15 @@ namespace Client
             vm = new MainViewModel();
             DataContext = vm;
             InitializeComponent();
+            Header.MouseLeftButtonDown += new MouseButtonEventHandler(layoutRoot_MouseLeftButtonDown);
         }
 
-        private void MainWinClose(object sender, MouseButtonEventArgs e)
-        {
-            Close();
-        }
 
         private void MainWindowHide(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
-        private void MainMenuOpen(object sender, MouseButtonEventArgs e)
-        {
-            Menu.Toggle();
-        }
 
         private void MessangerSend(object sender, MouseButtonEventArgs e)
         {
@@ -53,6 +46,22 @@ namespace Client
         private void MainMenuHide(object sender, MouseButtonEventArgs e)
         {
             Menu.Hide();
+        }
+
+        void layoutRoot_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Menu.Toggle();
+
         }
     }
 }
