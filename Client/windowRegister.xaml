@@ -36,7 +36,6 @@
                                          VerticalAlignment="Top" 
                                          Margin="15" 
                                          BorderBrush="Transparent"
-                                         MouseDown="PackIcon_MouseDown"
                                          Cursor="Hand"/>
             </Border>
 

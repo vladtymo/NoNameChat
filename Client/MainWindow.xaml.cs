@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,12 @@ namespace Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel vm = null;
+
         public MainWindow()
         {
+            vm = new MainViewModel();
+            DataContext = vm;
             InitializeComponent();
             Header.MouseLeftButtonDown += new MouseButtonEventHandler(layoutRoot_MouseLeftButtonDown);
         }

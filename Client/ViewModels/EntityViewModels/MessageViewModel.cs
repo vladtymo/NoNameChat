@@ -1,10 +1,13 @@
-﻿namespace Client
+﻿using System;
+
+namespace Client
 {
+    [Serializable]
     public class MessageViewModel : ViewModelBase
     {
         private string text;
         private GroupViewModel group;
-        private FileViewModel file;
+        //private FileViewModel file;
         private UserViewModel from;
 
         public int Id { get; set; }
@@ -33,10 +36,15 @@
 
 
         public int? FileId { get; set; }
-        public FileViewModel File
+        //public FileViewModel File
+        //{
+        //    get { return file; }
+        //    set { SetProperty(ref file, value); }
+        //}
+
+        public override string ToString()
         {
-            get { return file; }
-            set { SetProperty(ref file, value); }
+            return Text;
         }
 
     }
